@@ -17,6 +17,7 @@
 
 package tv.danmaku.ijk.media.example.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -32,6 +33,7 @@ import tv.danmaku.ijk.media.example.application.AppActivity;
 import tv.danmaku.ijk.media.example.application.Settings;
 import tv.danmaku.ijk.media.example.eventbus.FileExplorerEvents;
 import tv.danmaku.ijk.media.example.fragments.FileListFragment;
+import tv.danmaku.ijk.media.example.services.SensorService;
 
 public class FileExplorerActivity extends AppActivity {
     private Settings mSettings;
@@ -39,6 +41,8 @@ public class FileExplorerActivity extends AppActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        startService(new Intent(this, SensorService.class));
 
         if (mSettings == null) {
             mSettings = new Settings(this);

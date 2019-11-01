@@ -432,6 +432,13 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
             }
         }
         setDataSource(path);
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "packet-buffering", 0);
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "fflags", "nobuffer");
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "max-buffer-size", 1024);
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "min-frames", 5);
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "start-on-prepared", 1);
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "probsize", 10240L);
+//        setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "analyzeduration", 64L);
     }
 
     /**

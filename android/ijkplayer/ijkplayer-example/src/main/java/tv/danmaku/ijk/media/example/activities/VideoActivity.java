@@ -38,6 +38,7 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import tv.danmaku.ijk.media.example.services.SensorService;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.player.misc.ITrackInfo;
 import tv.danmaku.ijk.media.example.R;
@@ -151,6 +152,9 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
             return;
         }
         mVideoView.start();
+
+        startService(new Intent(this, SensorService.class));
+
     }
 
     @Override
@@ -172,6 +176,8 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
             mVideoView.enterBackground();
         }
         IjkMediaPlayer.native_profileEnd();
+
+        stopService(new Intent(this, SensorService.class));
     }
 
     @Override
